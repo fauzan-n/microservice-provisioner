@@ -5,15 +5,15 @@ import sys
 
 def provisioner(microservice_name, namespace_name, microservice_framework):
     bitbucket_api_url = "https://api.bitbucket.org/2.0"
-    bitbucket_username = ""                                 # BITBUCKET REPOSITORY OWNER NAME
-    bitbucket_auth_user = ""                                # BITBUCKET USERNAME
-    bitbucket_auth_password = os.environ[""]                # BITBUCKET PASSWORD
+    bitbucket_username = ""                                                 # BITBUCKET REPOSITORY OWNER NAME
+    bitbucket_auth_user = ""                                                # BITBUCKET USERNAME
+    bitbucket_auth_password = os.environ["BITBUCKET_AUTH_PASSWORD"]         # BITBUCKET PASSWORD
     bitbucket_header = {'Content-Type': 'application/json'}
-    jenkins_api_url = ""                                    # JENKINS SERVER URL
-    jenkins_auth_user = ""                                  # JENKINS USERNAME
-    jenkins_auth_password = os.environ[""]                  # JENKINS PASSWORD
+    jenkins_api_url = ""                                                    # JENKINS SERVER URL
+    jenkins_auth_user = ""                                                  # JENKINS USERNAME
+    jenkins_auth_password = os.environ["JENKINS_AUTH_PASSWORD"]             # JENKINS PASSWORD
     jenkins_header = {'Content-Type': 'text/xml'}
-    slack_token = os.environ[""]                            # SLACK TOKEN
+    slack_token = os.environ["SLACK_TOKEN"]                                 # SLACK TOKEN
     slack_header = {'Content-Type': 'application/json', 'Authorization': 'Bearer ' + slack_token}
     dba_slack_channel = "#dba-notifications"
 
